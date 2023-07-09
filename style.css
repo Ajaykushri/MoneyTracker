@@ -1,0 +1,312 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.brandname{
+    position: sticky;
+    top: 0px;
+    background-color: rgba(57, 10, 159, 0.865);
+    height: 100vh;
+}
+.name{
+    font-size: 10vh;
+    text-decoration: underline;
+    text-shadow: 7px -7px 10px rgba(19, 18, 19, 0.842);
+    font-family: cursive;
+    color: whitesmoke;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 50vh;
+    letter-spacing: 3px;
+}
+#first{
+    font-weight: lighter;
+    font-size: 7vh;
+    color: bisque;
+}
+.container{
+    display: flex;
+    position: relative;
+    bottom: 100vh;
+    background-color: rgba(60, 3, 228, 0.789);
+    
+    
+}
+
+.heading{
+    color:cornsilk;
+    font-size: larger;
+    font-weight:bold;
+    padding: 15px;
+    letter-spacing: 2px;    
+}
+
+.summary{
+    position: absolute;
+    /* background color hiding because fo absolute position. */
+    top:10vh;
+    padding: 5%;
+    width:70vw;
+    font-family:Georgia, 'Times New Roman', Times, serif, sans-serif;
+    background-color: rgba(97, 7, 251, 0.897);
+    
+}
+.summvalue{
+    display: flex;
+
+}
+.recieve,.chart,.spend{
+    margin: 3%;
+}
+.chart,.value{
+    border:5px solid white;
+    padding: 10px;
+    border-radius: 25% 15%;
+    background-color: rgba(255, 255, 255, 0.589);
+    margin-top: 1%;
+    text-align: center;
+}
+.balance{
+    color: azure;
+    font-weight: bold;
+    font-size: 4vh;
+}
+.value{
+    width: 20vw;
+    text-align: center;
+    color: black;
+    
+}
+.recieve,.spend{
+    color: azure;
+    font-weight: bold;
+    font-size: 3vh;
+    
+}
+
+
+.description{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4vh;
+    font-weight: bold;
+}
+.desctext{
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 5%;
+    margin: 3%;
+    border-radius: 20% 15%;
+}
+
+.dashboard{
+    position: absolute;
+    right: 0px;
+    width: 30vw;
+    background-color: rgba(225, 206, 232, 0.983);
+    list-style-position: inside;
+    padding: 10px;
+}
+.dashboard .title{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    color:rgb(3, 30, 82);
+    padding: 2px;
+
+    width: 100%;
+    text-align: center;
+    
+}
+.togletab{
+    display: flex;
+    align-items: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(3, 30, 82);
+    padding: 1px;
+    width: 100%;
+    font-size: 15px;
+    border-top:1px solid;
+    border-radius:5px 
+}
+.btnreciept,.btnspending,.alltab{
+    padding: 1% 4.6%;
+    border-left: 1px solid;
+}
+
+
+.btnspending:hover,.alltab:hover,.btnreciept:hover,#edit:hover,#delete:hover{
+    background-color: rgba(8, 8, 8, 0.77);
+    color: white;
+}
+
+
+.btnreciept:active,.btnspending:active,.alltab:active,#edit:active,#delete:active{
+    background-color: rgb(95, 94, 94);
+}
+
+.lst{
+
+    height: 80vh;
+    padding: 4%;
+    border: 1px solid;
+    overflow-y: scroll;
+}
+.recieved{
+    display: flex;
+    flex-direction: row;
+    padding: 2px;
+    
+}
+#edit{
+    margin-left: 5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    position: absolute;
+    left: 20vh;
+}
+#delete{
+    padding-left: 1vw;
+    padding-right: 1vw;
+    position: absolute;
+    left:40vh;
+}
+.entry{
+    width: 80%;
+    
+}
+
+
+.recieved,.spending{
+    width: 100%;
+    border-bottom: 1px solid;
+}
+
+.spending{
+    display: flex;
+    flex-direction: row;
+}
+.income,.withdrawl,.alltrans{
+    position: absolute;
+    top: 15vh;
+    visibility: hidden;
+    width: 100%;
+    /* 100% width take all width of container while vw or window, so if width 100% not increasing increase its container width first. */
+}
+/* not to give list items same absolute position else hide behind each other, give ul same position and togle them this way wont hide behind. */
+
+.input{
+    height: 15.6vh;
+    background-color:crimson;
+}
+
+
+/* make it responsive */
+@media screen and (max-width:918px){
+    
+    .container{
+        flex-direction: column;
+        width: 100vw;
+        
+    }
+    .input{
+        padding:3vw
+    }
+    .text,.txtvalue{
+        background-color: red;
+        color: black;
+        width:30%;
+    }
+    #type{
+        background-color: red;
+    }
+    .add{
+        margin-left: 8vw;
+    }
+    .value{
+        font-size: small;
+    }
+    
+
+    .summary,.dashboard{
+        position: relative;
+        width: 100vw;
+    }
+    .summary{
+        top:2vh;
+        width:100vw;
+        /* always width with vw and height with vh esle problem */
+        background-color: rgba(74, 8, 135, 0.444);
+    }
+    .dashboard{
+        width: 100vw;
+    }
+
+    .income,.withdrawl,.alltrans{
+        top: 25vh;
+        width: 100vh;
+    }
+    .entry{
+        width: 100%;
+    }
+    #edit{
+        left: 60vh;
+    }
+    #delete{
+        left: 90vh;
+    }
+}
+
+@media  screen and (max-width:328px) {
+    
+    .summary{
+        padding: 5%;
+        width:100vw;
+        font-family:Georgia, 'Times New Roman', Times, serif, sans-serif;
+        
+    }
+    
+    .recieve,.chart,.spend{
+        margin: 3%;
+    }
+    .chart,.value{
+        
+        padding: 10px;
+        margin-top: 1%;
+    }
+    .balance{
+        color: azure;
+        font-weight: bold;
+        font-size: 4vh;
+    }
+    .value{
+        
+        color: black;
+        font-weight: lighter;
+        font-size: small;
+        
+    }
+    .recieve,.spend{
+        color: azure;
+        font-weight: bold;
+        font-size: 3vh;
+        
+    }
+    
+    
+    .description{
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 4vh;
+        font-weight: bold;
+    }
+    .desctext{
+        font-size: 15px;
+        font-weight: lighter;
+        padding: 5%;
+        margin: 3%;
+        border-radius: 20% 15%;
+    }
+    
+}

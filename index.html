@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyTracker</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{visibility: hidden;}
+    </style>
+</head>
+
+<!-- you should be aware of the layout of the page and make right container and keep element in right container for best css and js use -->
+
+<body>
+        <!-- use classes and ids for each container and element -->
+    <div class="brandname">
+        <div class="name"><span id="first">Money</span><span id="second">Tracker</span></div>
+    </div>
+    <!-- as every thing hidden when this appear on load, and in one sec go and other stuff appear -->
+    <div class="container">
+
+        <div class="heading">MoneyTracker</div>
+        <div class="summary">
+            <div class="balance">
+                <div class="title">
+                    <p>Balance:</p>
+                </div>
+                <div class="value">
+                    <span id="sign"></span>
+                    <!-- to add sign created seperate container and added sign to it -->
+                    <span>&#8377</span><span id="bal">0</span>
+                    <!-- <p> is a block container like div so next element go in next line so not go with span -->
+                </div>
+            </div>
+            <div class="summvalue">
+                <div class="recieve">
+                    <div class="title">
+                        <p>Recieved Money</p>
+                    </div>
+                    <div class="value" >
+                        
+                        <span>&#8377</span><span id="rec">0</span>
+                    </div>
+                </div>
+                <div class="chart">
+                    <canvas id="chart" width="100" height="100"></canvas>
+                </div>
+                <div class="spend">
+                    <div class="title">
+                        <p>Spended Money</p>
+                    </div>
+                    <div class="value" >
+                        <span>&#8377</span><span id="spen">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="description">
+                <div class="title">Account Health:
+                    <div class="desctext">
+                    
+                    </div>
+                </div>
+                <!-- this tell weither account in red zone, green zone or orange zone where super healthy account health.
+                if balance is low red, ave good, all super -->
+            </div>
+            
+        </div>
+        <div class="dashboard">
+            <div class="title">
+                <p>Dashboard</p>
+            </div>
+            <div class="togletab">
+                <div class="btnreciept">
+                    <p>Reciept: </p>
+                </div>
+                <div class="btnspending">
+                    <p>Spendings: </p>
+                </div>
+                <div class="alltab">
+                    <p>All Transactions:</p>
+                    <!-- they are  just btns, when clicked will create togle effect hide and visisblity game -->
+                </div>
+            </div>
+            <div class="lst">
+                <ul class="income">
+                </ul>
+                <ul class="withdrawl">
+                </ul>
+                <ul class="alltrans">
+                </ul>
+            </div>
+            <div class="input">
+                <input type="text" class="text" placeholder="Title">
+                <input type="number" class="txtvalue" placeholder="Ammount" >
+                <select name="type" id="type" >
+                    <option disabled selected> Entry Type</option>
+                    <option value="recieved">Recieved</option>
+                    <option value="spending">Spendings</option>
+                </select>
+                <button class="add">Add</button>
+
+            </div>
+        </div>
+
+    </div>
+
+<script src="main.js"></script>
+
+</body>
+
+</html>
